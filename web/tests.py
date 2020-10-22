@@ -5,7 +5,7 @@ from app import app, db
 
 class BasicTests(unittest.TestCase):
     def setUp(self):
-        app.config.from_object(os.environ.get('FLASK_ENV') or 'config.TestingConfig')
+        app.config.from_object(os.environ.get('FLASK_CONFIG') or 'config.TestingConfig')
         self.app = app.test_client()
         db.drop_all()
         db.create_all()
