@@ -15,10 +15,10 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(256), nullable=False, unique=True)
     password_hash = db.Column(db.String(512), nullable=False, unique=True)
     created_on = db.Column(db.DateTime(), default=datetime.utcnow)
-    #posts = db.relationship('Post', backref='category', cascade='all,delete-orphan')
+    # posts = db.relationship('Post', backref='category', cascade='all,delete-orphan')
 
     def __repr__(self):
-        return "<{}:{}>".format(self.id, self.name)
+        return "<{}:{}>".format(self.id, self.email)
 
     def set_password(self, password):
         self.password_hash = generate_password_hash(password)
@@ -35,7 +35,7 @@ class Post(db.Model):
     path = db.Column(db.String(255), nullable=False)
     description = db.Column(db.Text(), nullable=False)
     created_on = db.Column(db.DateTime(), default=datetime.utcnow)
-    #category_id = db.Column(db.Integer(), db.ForeignKey('categories.id'))
+    # category_id = db.Column(db.Integer(), db.ForeignKey('categories.id'))
 
     def __repr__(self):
         return "<{}:{}>".format(self.id, self.title[:10])

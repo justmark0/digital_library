@@ -6,13 +6,14 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__)
-app.config.from_object(os.environ.get('FLASK_CONFIG') or 'config.DevelopementConfig')
+app.config.from_object(os.environ.get('FLASK_CONFIG') or 'config.DevelopmentConfig')
 
 
 db = SQLAlchemy(app)
 # migrate = Migrate(app, db)
 login_manager = LoginManager(app)
-login_manager.login_view = 'login'
+login_manager.init_app(app)
+#login_manager.login_view = 'login'
 
 # db.create_all()
 

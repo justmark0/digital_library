@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee60ffe9-29e5-4ea3-a203-9576839b43af" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JupyterTrust" id="4f059621-c796-4cd4-ab14-4121316dfb3f" />
+  <component name="ProjectId" id="1jH4fwOpO63wCdRlpEU2GeRj4Gu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/web" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee60ffe9-29e5-4ea3-a203-9576839b43af" name="Default Changelist" comment="" />
+      <created>1603447793860</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603447793860</updated>
+      <workItem from="1603447797911" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="778" y="235" width="424" height="491" key="FileChooserDialogImpl" timestamp="1603447819064">
+      <screen x="72" y="27" width="1846" height="901" />
+    </state>
+    <state x="778" y="235" width="424" height="491" key="FileChooserDialogImpl/72.27.1846.901@72.27.1846.901" timestamp="1603447819064" />
+  </component>
+</project>
