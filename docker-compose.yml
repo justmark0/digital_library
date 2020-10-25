@@ -3,7 +3,7 @@ version: '3.4'
 services:
   web:
     build: ./web/
-    command: gunicorn --bind 0.0.0.0:5000 main:app
+    command: gunicorn -w 6 --bind 0.0.0.0:5000 main:app
     restart: always
     environment:
       FLASK_APP: app
@@ -13,6 +13,7 @@ services:
       - "5000:5000"
     networks:
       - db_nw
+      - web_nw
     depends_on:
       - db
   db:
@@ -24,12 +25,24 @@ services:
       POSTGRES_USER: db_admin
       POSTGRES_PASSWORD: v3rY_h4Rd_t0_gu355_p455w0Rd
     ports:
-        - "5432:5432"
+      - "5432:5432"
     networks:
       - db_nw
+  nginx:
+    image: "nginx:latest"
+    ports:
+      - "80:80"
+    volumes:
+      - ./conf.d:/etc/nginx/conf.d
+    networks:
+      - web_nw
+    depends_on:
+      - web
 
 networks:
   db_nw:
+    driver: bridge
+  web_nw:
     driver: bridge
 volumes:
   postgres_data:
