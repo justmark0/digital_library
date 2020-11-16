@@ -32,20 +32,22 @@
             <div class="outline_form" id="outline_form">
                 <div class="form_hat bcolor3"></div>
                 <div class="form_block bcolor2 bdcolor3">
-                    <form action="" method="post" enctype="text/plain" novalidate>
-                    <div class="form_inputs">
-                        <p class="form_text color3">email address</p>
-                        <!--input type="text" name="login" maxlength="50" size=21 class="bdcolor3"-->
-                        {{ form.email(size=21, maxlength="50", class="bdcolor3") }}<br>
+                    <form action="" method="post" novalidate>
+                        {{ form.hidden_tag() }}
+                        <div class="form_inputs">
+                            <p class="form_text color3">email address</p>
+                            <!--input type="text" name="login" maxlength="50" size=21 class="bdcolor3"-->
+                            {{ form.email(size=21, maxlength="50", class="bdcolor3") }}<br>
 
-                        <p class="form_text color3">password</p>
-                        <!--input type="password" name="password" maxlength="50" size=21 class="bdcolor3"-->
-                        {{ form.password(size=21, maxlength="50", class="bdcolor3") }}<br>
-                    </div>
-                    <div class="form_submit">
-                        <!--input type="button" name="submit" type="submit" value="start" class="color2 bcolor3"-->
-                        {{ form.submit(value="start", type="button", class="color2 bcolor3") }}
-                    </div>
+                            <p class="form_text color3">password</p>
+                            <!--input type="password" name="password" maxlength="50" size=21 class="bdcolor3"-->
+                            {{ form.password(size=21, type="password", maxlength="50", class="bdcolor3") }}<br>
+                            
+                        </div>
+                        <div class="form_submit">
+                            <!--input type="button" name="submit" type="submit" value="start" class="color2 bcolor3"-->
+                            {{ form.submit(value="start", type="submit", class="color2 bcolor3") }}
+                        </div>
                     </form>
                 </div>
             </div>
