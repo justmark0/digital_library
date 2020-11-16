@@ -17,6 +17,7 @@ class DevelopmentConfig(BaseConfig):
 class TestingConfig(BaseConfig):
     DEBUG = True
     WTF_CSRF_ENABLED = False
+    STATIC_FOLDER = f"{app_dir}/app/static"
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(app_dir, 'app_testing.db')
 

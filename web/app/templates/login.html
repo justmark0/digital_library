@@ -1,25 +1,54 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Main</title>
-</head>
-<body>
-{% block content %}
-    <h1>Sign In</h1>
-    <form action="" method="post" novalidate>
-        {{ form.hidden_tag() }}
-        <p>
-            {{ form.email.label }}<br>
-            {{ form.email(size=32) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
-        </p>
-        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
-        <p>{{ form.submit() }}</p>
-    </form>
-{% endblock %}
-</body>
+
+    <head>
+        <title>ODBD</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="description" content="Digital Library - all the files for the IU students in one place">
+        <meta name="keywords" content="Digital Library, Innopolis, UI, DL, project, students, bachelor, master">
+        <link rel="stylesheet" type="text/css" href="static/css/general_style.css">
+        <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+        <link rel="stylesheet" type="text/css" href="static/css/landing_style.css">
+        <script type="text/javascript" defer="defer">
+            function toggle_form() {
+                document.getElementById("outline_button").style.display = "none";
+                document.getElementById("outline_form").style.display = "block";
+            }
+
+        </script>
+    </head>
+    <body class="bcolor1">
+        <header>
+            <img src="static/images/odbd_landing.png" class="logo">
+            <h1 class="logo_description color3">one day before deadline</h1>
+        </header>
+
+        <div class="outline_box">
+            <div class="outline_button" id="outline_button">
+                <!-- img src="static/images/button_inactive.png" class="form button_inactive" onclick="toggle_form()"-->
+                <img src="static/images/button_background.png" class="button_background" onclick="toggle_form()">
+                <!-- img src="static/images/button_front.png" class="button_front" onclick="toggle_form()"-->
+            </div>
+
+            <div class="outline_form" id="outline_form">
+                <div class="form_hat bcolor3"></div>
+                <div class="form_block bcolor2 bdcolor3">
+                    <form action="" method="post" enctype="text/plain" novalidate>
+                    <div class="form_inputs">
+                        <p class="form_text color3">email address</p>
+                        <!--input type="text" name="login" maxlength="50" size=21 class="bdcolor3"-->
+                        {{ form.email(size=21, maxlength="50", class="bdcolor3") }}<br>
+
+                        <p class="form_text color3">password</p>
+                        <!--input type="password" name="password" maxlength="50" size=21 class="bdcolor3"-->
+                        {{ form.password(size=21, maxlength="50", class="bdcolor3") }}<br>
+                    </div>
+                    <div class="form_submit">
+                        <!--input type="button" name="submit" type="submit" value="start" class="color2 bcolor3"-->
+                        {{ form.submit(value="start", type="button", class="color2 bcolor3") }}
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

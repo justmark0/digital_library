@@ -1,0 +1,49 @@
+/* 
+#E6DF44 - Нарцисс
+#F0810F - Мандарин
+#063852 - Черника
+#011A27 - Глубокий синий
+*/
+
+p, h1,input {
+    font-family: "Neue Machina";
+}
+.color1 {
+    color: #E6DF44;
+}
+.color2 {
+    color: #F0810F;
+}
+.color3 {
+    color: #063852;
+}
+.color4 {
+    color: #011A27;
+}
+.bcolor1 {
+    background-color: #E6DF44;
+}
+.bcolor2 {
+    background-color: #F0810F;
+}
+.bcolor3 {
+    background-color: #063852;
+}
+.bcolor4 {
+    background-color: #011A27;
+}
+.bdcolor1 {
+    border-color: #E6DF44; 
+}
+.bdcolor2 {
+    border-color: #F0810F;
+}
+.bdcolor3 {
+    border-color: #063852;
+}
+.bdcolor4 {
+    border-color: #011A27;
+}
+body {
+    
+}

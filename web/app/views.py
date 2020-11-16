@@ -1,8 +1,13 @@
-from flask import render_template, request, redirect, url_for, flash
+from flask import render_template, request, redirect, url_for, flash, send_from_directory
 from flask_login import current_user, login_user, logout_user
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
 from app.models import User
+
+
+@app.route("/static/<path:filename>")
+def staticfiles(filename):
+    return send_from_directory(app.config["STATIC_FOLDER"], filename)
 
 
 @app.route('/', methods=['GET', 'POST'])
