@@ -1,5 +1,6 @@
+
 <html lang="en">
-    
+
     <head>
         <title>ODBD</title>
         <meta http-equiv="content-type" content="text/html" charset="utf-8">
@@ -28,7 +29,7 @@
                     document.getElementById("bulbactive").style.display = "block";
                 }
             }
-            
+
         </script>
     </head>
     <body>
@@ -38,17 +39,17 @@
             <div class="picture">
                 <img class="picture" src ="../static/images/odbd_landing.png">
             </div>
-            
+
             <div class="bulb">
                 <img class="bulb" id="bulbpassive" src ="../static/images/bulb_lines_press.png">
                 <img class="bulb" id="bulbactive" src="../static/images/back_with_bulb.png">
             </div>
         </div>
-        
+
         <div class="sidebar">
             <h3 class ="subjects color4" onclick="toggleView('years_bachelors')"> Bachelors </h3>
-            
-            <div class ="years color3" id="years_bachelors"> 
+
+            <div class ="years color3" id="years_bachelors">
                 <h3 class ="years color3" onclick="toggleView('subjects_b1')"> 1 year </h3>
                 <div class="subjects" id="subjects_b1">
                     <h4 class ="nameofsubjects color2">English for Academic Purposes </h4>
@@ -62,7 +63,7 @@
                     <h4 class ="nameofsubjects color2">Computer Architecture</h4>
                     <h4 class ="nameofsubjects color2">Mathematical Analysis 1</h4>
                 </div>
-            
+
                 <h3 class ="years color3" onclick="toggleView('subjects_b2')"> 2 year </h3>
                 <div class="subjects" id="subjects_b2">
                     <h4 class ="nameofsubjects color2">Fundamentals of Software Engineering</h4>
@@ -71,7 +72,7 @@
                     <h4 class ="nameofsubjects color2">Differential Equations</h4>
                     <h4 class ="nameofsubjects color2">Probability and Statistics</h4>
                 </div>
-            
+
                 <h3 class ="years color3" onclick="toggleView('subjects_b3')"> 3 year </h3>
                 <div class="subjects" id="subjects_b3">
                     <h4 class ="nameofsubjects color2">Information Theory</h4>
@@ -87,7 +88,7 @@
                     <h4 class ="nameofsubjects color2">Non-linear Optimization</h4>
                     <h4 class ="nameofsubjects color2">Theoretical Mechanics</h4>
                 </div>
-                 
+
                 <h3 class ="years color3" onclick="toggleView('subjects_b4')"> 4 year </h3>
                 <div class="subjects" id="subjects_b4">
                     <h4 class ="nameofsubjects color2"> Academic Research and Writing Culture</h4>
@@ -99,8 +100,8 @@
                     <h4 class ="nameofsubjects color2">Mobile Robotics and Autonomous Driving</h4>
                 </div>
             </div>
-            
-            
+
+
            <h3 class ="subjects color4" onclick="toggleView('subjects_masters')"> Masters </h3>
             <div class ="years color3" id="subjects_masters">
                 <div class="subjects" style="display: block !important">
@@ -117,14 +118,14 @@
                     <h4 class ="nameofsubjects color2">Humanitarian Electives
                     </h4>
                     <h4 class ="nameofsubjects color2">Thesis
-                    </h4>           
+                    </h4>
                 </div>
             </div>
-            
-            
-            
+
+
+
             <h3 class ="subjects color4"> Postgraduates </h3>
-            
+
         </div>
 
 
@@ -135,20 +136,41 @@
                 </div>
                 <div class="main_materials">
                     <table class="main_materials_table" cols="3">
-                    {% for materials_row in materials | batch(3, '&nbsp;') %}
+
                     <tr class="main_materials_table">
-                        {% for material in materials_row %}
-                        {% if material.name %}
+
+
                         <td class="main_materials_table empty" rowspan="1">
-                                <img src="../static/images/{{ material.preview }}" class="main_materials_table_img">
+                                <img src="../static/images/example1.jpg" class="main_materials_table_img">
                                 <div class="main_materials_table">
-                                    <span class="main_materials_table color3">{{ material.name }}</span>
+                                    <span class="main_materials_table color3"> Python is great</span>
                                 </div>
                             </td>
-                        {% endif %}
-                        {% endfor %}
+                        
+                        <td class="main_materials_table empty" rowspan="1">
+                                <img src="../static/images/example1.jpg" class="main_materials_table_img">
+                                <div class="main_materials_table">
+                                    <span class="main_materials_table color3"> Python course for beginners</span>
+                                </div>
+                            </td>
+
+                        <td class="main_materials_table empty" rowspan="1">
+                                <img src="../static/images/example1.jpg" class="main_materials_table_img">
+                                <div class="main_materials_table">
+                                    <span class="main_materials_table color3"> Sample python course</span>
+                                </div>
+                            </td>
                     </tr>
-                    {% endfor %}
+
+                    <tr class="main_materials_table">
+                        <td class="main_materials_table empty" rowspan="1">
+                                <img src="../static/images/example1.jpg" class="main_materials_table_img">
+                                <div class="main_materials_table">
+                                    <span class="main_materials_table color3">Introduction to Machine Learning</span>
+                                </div>
+                            </td>
+                    </tr>
+
                 </table>
                 </div>
             </div>

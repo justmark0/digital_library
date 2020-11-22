@@ -57,6 +57,6 @@ def logout():
 @app.route('/library', methods=['GET', 'POST'])
 def library():
     if current_user.is_authenticated:
-        return render_template("index.html", materials=list(Material.query.all()))
+        return render_template("index.html")
     else:
         return 'Your are not authenticated!'
