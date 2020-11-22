@@ -88,6 +88,7 @@ class Material(db.Model):
     approved_by = db.Column(db.Integer, db.ForeignKey('professor.prof_id'))
     rating = db.Column(db.Integer, default=10)
     data = db.Column(db.LargeBinary)
+    preview = db.Column(db.String(256))  # unique name of image preview
     created_on = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):

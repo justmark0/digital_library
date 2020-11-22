@@ -1,15 +1,25 @@
-p.nav_lvl1 {
-    font-weight: 500;
-    font-size: 1.75em;
-    margin: 0.4em 0 0.4em;
+body {
+    margin: 0;
+    overflow: scroll;
 }
-p.nav_lvl2 {
-    font-weight: 500;
-    font-size: 1.5em;
-    margin: 0.25em 0 0.25em;
+img#bulbactive {
+    display: none;
+    z-index: 999;
 }
-img.logo {
-    height: 100%;
+img#bulbpassive {
+    display: block;
+}
+img#back_sidebar {
+    display: none;
+    z-index: 999;
+}
+div.invisible_click {
+    position: absolute;
+    top: 49%;
+    right: 8.5%;
+    width: 165px;
+    height: 215px;
+    z-index: 1001;
 }
 div.header {
     height: 15%;
@@ -17,68 +27,157 @@ div.header {
     position: absolute;
     margin: 0;
 }
-div.header_inline {
-    position: absolute;
-    top:0;
-    height: 66.6%;
-    width: 100%;
-}
-div.header_tagline {
-    position: absolute;
-    bottom: 0;
-    height: auto;
-    right: 0;
-    width: 55%;
-}
-span.header_text {
-    font-size: 3em;
-    font-family: "Neue Machina";
-    text-align: right;
-    letter-spacing: -5px;
-    margin-bottom: 33.3%;
-}
-span.header1 {
-    font-weight: 900;
-    color: #F0810F;
-    width: auto;
-}
-span.header2 {
-    font-weight: 400;
-    color: #E6DF44;
-    width: auto;
-}
-span.header3 {
-    font-weight: 400;
-    color: #063852;
-    width: auto;
-}
-span.header4 {
-    font-weight: 600;
-    color: #E6DF44;
-    width: auto;
-}
-span.header5 {
-    font-weight: 900;
-    color: #E6DF44;
-    width: auto;
-}
-span.space {
-    margin-left: 0.4em;
-}
-span.bigspace {
-    margin-left: 0.75em;
-}
-div.nav_total {
+div.sidebar {
     position: absolute;
     height: 85%;
-    width: 20%;
+    width: 25%;
     left: 0;
     top: 15%;
 }
-img.bulb {
-    position: absolute;
-    top:0;
-    right: 8.4%;
-    height: 50%;
+div.picture {
+    width: 17%;
+    height: 100px;
+    float: left;
+    position:relative;
+}
+img.picture {
+    position:relative;
+    float:left;
+    height:78%;
+/*    width:100%*/
+/*    padding-left: 20;*/
+    padding-bottom: 20px;
+    padding-right: 20px;
+/*    padding-top: 20;*/
 }
 
+
+div.bulb {
+    width: 83%;
+    height:100%;
+    float: right;
+    position:relative;
+
+}
+img.bulb {
+    z-index:1000;
+    padding-left:0;
+    padding-bottom: 20px;
+    padding-right: 0;
+    width:100%;
+/*    height:400%;*/
+    float: right;
+    position:relative;
+    
+}
+div.main {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+    width: 75%;
+    height: 85%;
+    background-color: bisque;
+}
+div.main_data {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    background-color: darkolivegreen;
+}
+div.main_title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+}
+div.main_materials {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: aliceblue;
+}
+h2.main_title {
+    font-size: 3em;
+    font-family: "Neue Machina";
+    text-align: center;
+    margin: auto;
+}
+
+div.main_material {
+    position: relative;
+}
+table.main_materials_table {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+td.main_materials_table {
+    background-color: #BBFFFF;
+    height: 250px;
+    width: 220px;
+    padding: 0 15px 30px;
+}
+img.main_materials_table_img {
+    height: 70%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 9%;
+    padding: 0;
+}
+div.main_materials_table {
+    width: 80%;
+    margin-left: 10%;
+}
+span.main_materials_table {
+    font-size: 0.9em;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+h3.subjects {
+    font-size : 2.3em;
+    top: 100px;
+    font-family: "Neue Machina";
+    text-align: left;
+    margin:auto;
+}
+h3.years {
+    font-size : 1.9em;
+    font-family: "Neue Machina";
+    text-align: left;
+    margin:auto;
+}
+div.years {
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 0;
+    display: none;
+}
+
+div.subjects {
+    margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 0;
+    display: none;
+}
+
+h4.nameofsubjects {
+    font-family: "Neue Machina";
+    font-size : 1.5em;
+    text-align: left;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    margin-right: 0;
+}
+
+div.main_material {
+    position: relative;
+}

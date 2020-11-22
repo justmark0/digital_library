@@ -5,44 +5,44 @@
 #011A27 - Глубокий синий
 */
 
-p, h1,input {
+p, h1, h2, input, span {
     font-family: "Neue Machina";
 }
 .color1 {
-    color: #E6DF44;
+    color: #E6DF44 !important;
 }
 .color2 {
-    color: #F0810F;
+    color: #F0810F !important;
 }
 .color3 {
-    color: #063852;
+    color: #063852 !important;
 }
 .color4 {
-    color: #011A27;
+    color: #011A27 !important;
 }
 .bcolor1 {
-    background-color: #E6DF44;
+    background-color: #E6DF44 !important;
 }
 .bcolor2 {
-    background-color: #F0810F;
+    background-color: #F0810F !important;
 }
 .bcolor3 {
-    background-color: #063852;
+    background-color: #063852 !important;
 }
 .bcolor4 {
-    background-color: #011A27;
+    background-color: #011A27 !important;
 }
 .bdcolor1 {
-    border-color: #E6DF44; 
+    border-color: #E6DF44 !important; 
 }
 .bdcolor2 {
-    border-color: #F0810F;
+    border-color: #F0810F !important;
 }
 .bdcolor3 {
-    border-color: #063852;
+    border-color: #063852 !important;
 }
 .bdcolor4 {
-    border-color: #011A27;
+    border-color: #011A27 !important;
 }
 body {
     

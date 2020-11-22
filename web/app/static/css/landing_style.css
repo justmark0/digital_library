@@ -80,7 +80,6 @@ div.form_submit {
     bottom: 5%;
     margin-left: -4px;
     margin-top: -2px;
-    <!--padding-top:-->
 }
 img.button_inactive {
     margin: auto;
@@ -112,7 +111,7 @@ input[type="text"], input[type="password"] {
     border-width: 5px;
     border-style: solid;
 }
-input[type="button"], input[type="submit"] {
+input[type="button"] {
     font-size: 1.4em;
     margin: 1.6em 0;
     height: 73%;

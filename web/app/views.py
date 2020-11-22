@@ -2,7 +2,7 @@ from flask import render_template, request, redirect, url_for, flash, send_from_
 from flask_login import current_user, login_user, logout_user
 from app import app, db
 from app.forms import LoginForm, RegistrationForm
-from app.models import User
+from app.models import User, Material
 
 
 @app.route("/static/<path:filename>")
@@ -14,7 +14,7 @@ def staticfiles(filename):
 def index():
     if current_user.is_authenticated:
         return redirect('/library')
-    return render_template('index.html')
+    return redirect('/login')
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -57,7 +57,6 @@ def logout():
 @app.route('/library', methods=['GET', 'POST'])
 def library():
     if current_user.is_authenticated:
-        return 'Hello ' + current_user.email.split('@')[0] + '''<div>
-        <a href="''' + url_for('logout') + '''">Logout</a> </div>'''
+        return render_template("index.html", materials=list(Material.query.all()))
     else:
         return 'Your are not authenticated!'

@@ -1,11 +1,157 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Library</title>
-</head>
-<body>
-<a href={{ url_for('login') }}> Sign In </a>
-<a href={{ url_for('register') }}> Sign Up </a>
-</body>
-</html>
+    
+    <head>
+        <title>ODBD</title>
+        <meta http-equiv="content-type" content="text/html" charset="utf-8">
+        <meta name="description" content="Digital Library - all the files for the IU students in one place">
+        <meta name="keywords" content="Digital Library, Innopolis, UI, DL, project, students, bachelor, master">
+        <link rel="stylesheet" type="text/css" href="../static/css/general_style.css">
+        <link rel="stylesheet" type="text/css" href="../static/fonts/fonts.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/index_style.css">
+        <script type="text/javascript" defer="defer">
+            function toggleView(view_id) {
+                if (document.getElementById(view_id).style.display == "block") {
+                    document.getElementById(view_id).style.display = "none";
+                } else {
+                    document.getElementById(view_id).style.display = "block";
+                }
+            }
+            function lightbulb() {
+                if (document.getElementById("bulbpassive").style.display == "none") {
+                    document.getElementById("bulbpassive").style.display = "block";
+//                    document.getElementById("back_sidebar").style.display = "none";
+                    document.getElementById("bulbactive").style.display = "none";
+                }
+                else {
+                    document.getElementById("bulbpassive").style.display = "none";
+//                    document.getElementById("back_sidebar").style.display = "block";
+                    document.getElementById("bulbactive").style.display = "block";
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <img id="back_sidebar" src="../static/images/back_sidebar.png">
+        <div class="invisible_click" onclick="lightbulb()"></div>
+        <div class="header">
+            <div class="picture">
+                <img class="picture" src ="../static/images/odbd_landing.png">
+            </div>
+            
+            <div class="bulb">
+                <img class="bulb" id="bulbpassive" src ="../static/images/bulb_lines_press.png">
+                <img class="bulb" id="bulbactive" src="../static/images/back_with_bulb.png">
+            </div>
+        </div>
+        
+        <div class="sidebar">
+            <h3 class ="subjects color4" onclick="toggleView('years_bachelors')"> Bachelors </h3>
+            
+            <div class ="years color3" id="years_bachelors"> 
+                <h3 class ="years color3" onclick="toggleView('subjects_b1')"> 1 year </h3>
+                <div class="subjects" id="subjects_b1">
+                    <h4 class ="nameofsubjects color2">English for Academic Purposes </h4>
+                    <h4 class ="nameofsubjects color2">Analytical Geometry and Lineal Algebra 1</h4>
+                    <h4 class ="nameofsubjects color2">Introduction to Programming</h4>
+                    <h4 class ="nameofsubjects color2"></h4>
+                    <h4 class ="nameofsubjects color2">Discrete Mathematics</h4>
+                    <h4 class ="nameofsubjects color2">Fundamentals of Philosophy</h4>
+                    <h4 class ="nameofsubjects color2">Programming Software Systems</h4>
+                    <h4 class ="nameofsubjects color2">Calculus 1</h4>
+                    <h4 class ="nameofsubjects color2">Computer Architecture</h4>
+                    <h4 class ="nameofsubjects color2">Mathematical Analysis 1</h4>
+                </div>
+            
+                <h3 class ="years color3" onclick="toggleView('subjects_b2')"> 2 year </h3>
+                <div class="subjects" id="subjects_b2">
+                    <h4 class ="nameofsubjects color2">Fundamentals of Software Engineering</h4>
+                    <h4 class ="nameofsubjects color2">Operating Systems</h4>
+                    <h4 class ="nameofsubjects color2">Physics 1 – Mechanics</h4>
+                    <h4 class ="nameofsubjects color2">Differential Equations</h4>
+                    <h4 class ="nameofsubjects color2">Probability and Statistics</h4>
+                </div>
+            
+                <h3 class ="years color3" onclick="toggleView('subjects_b3')"> 3 year </h3>
+                <div class="subjects" id="subjects_b3">
+                    <h4 class ="nameofsubjects color2">Information Theory</h4>
+                    <h4 class ="nameofsubjects color2">Philosophy 2</h4>
+                    <h4 class ="nameofsubjects color2">Introduction to Machine Learning</h4>
+                    <h4 class ="nameofsubjects color2">Software Achitecture</h4>
+                    <h4 class ="nameofsubjects color2">Distributed Systems</h4>
+                    <h4 class ="nameofsubjects color2">Compiler Contruction</h4>
+                    <h4 class ="nameofsubjects color2">Introduction to Big Data</h4>
+                    <h4 class ="nameofsubjects color2">System and Network Administration</h4>
+                    <h4 class ="nameofsubjects color2">Fundamentals of Computer Security</h4>
+                    <h4 class ="nameofsubjects color2">Fundamentals of Robotics</h4>
+                    <h4 class ="nameofsubjects color2">Non-linear Optimization</h4>
+                    <h4 class ="nameofsubjects color2">Theoretical Mechanics</h4>
+                </div>
+                 
+                <h3 class ="years color3" onclick="toggleView('subjects_b4')"> 4 year </h3>
+                <div class="subjects" id="subjects_b4">
+                    <h4 class ="nameofsubjects color2"> Academic Research and Writing Culture</h4>
+                    <h4 class ="nameofsubjects color2"> Introduction to Computer Vision</h4>
+                    <h4 class ="nameofsubjects color2"> Numerical Modeling</h4>
+                    <h4 class ="nameofsubjects color2"> Foundations of Mathematical Economics and Quantitative Finance</h4>
+                    <h4 class ="nameofsubjects color2">Mobile App Development</h4>
+                    <h4 class ="nameofsubjects color2">Distributed Ledger Technologies</h4>
+                    <h4 class ="nameofsubjects color2">Mobile Robotics and Autonomous Driving</h4>
+                </div>
+            </div>
+            
+            
+           <h3 class ="subjects color4" onclick="toggleView('subjects_masters')"> Masters </h3>
+            <div class ="years color3" id="subjects_masters">
+                <div class="subjects" style="display: block !important">
+                    <h4 class ="nameofsubjects color2"> Data Analysis and AI </h4>
+                    <h4 class ="nameofsubjects color2"> Machine Learning</h4>
+                    <h4 class ="nameofsubjects color2"> Advanced Machine Learning</h4>
+                    <h4 class ="nameofsubjects color2"> High-Dimensional Data Analysis</h4>
+                    <h4 class ="nameofsubjects color2"> Big Data Technologies and Analytics</h4>
+                    <h4 class ="nameofsubjects color2">In Metrics</h4>
+                    <h4 class ="nameofsubjects color2">Advanced Statistics and Optimisation</h4>
+                    <h4 class ="nameofsubjects color2">Managing Software Development</h4>
+                    <h4 class ="nameofsubjects color2">Technical Electives
+                    </h4>
+                    <h4 class ="nameofsubjects color2">Humanitarian Electives
+                    </h4>
+                    <h4 class ="nameofsubjects color2">Thesis
+                    </h4>           
+                </div>
+            </div>
+            
+            
+            
+            <h3 class ="subjects color4"> Postgraduates </h3>
+            
+        </div>
+
+
+    <div class="main">
+            <div class="main_data">
+                <div class="main_title">
+                    <h2 class="main_title color2"> Machine learning materials </h2>
+                </div>
+                <div class="main_materials">
+                    <table class="main_materials_table" cols="3">
+                    {% for materials_row in materials | batch(3, '&nbsp;') %}
+                    <tr class="main_materials_table">
+                        {% for material in materials_row %}
+                        {% if material.name %}
+                        <td class="main_materials_table empty" rowspan="1">
+                                <img src="../static/images/{{ material.preview }}" class="main_materials_table_img">
+                                <div class="main_materials_table">
+                                    <span class="main_materials_table color3">{{ material.name }}</span>
+                                </div>
+                            </td>
+                        {% endif %}
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </table>
+                </div>
+            </div>
+        </div>
+        
+    </body>
